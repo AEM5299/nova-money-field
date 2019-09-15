@@ -20,12 +20,13 @@ class Money extends Number
 
     public $inMinorUnits;
 
-    public function __construct($name, $currency = 'USD', $attribute = null, $resolveCallback = null)
+    public function __construct($name, $currency = 'USD', $formSymbol = null, $attribute = null, $resolveCallback = null)
     {
         parent::__construct($name, $attribute, $resolveCallback);
 
         $this->withMeta([
             'currency' => $currency,
+            'formSymbol' => $formSymbol? $formSymbol : $currency,
             'subUnits' => $this->subunits($currency),
         ]);
 
