@@ -10,7 +10,7 @@
 You can install the package in to a Laravel app that uses [Nova](https://nova.laravel.com) via composer:
 
 ```bash
-composer require vyuldashev/nova-money-field
+composer require cookaborough/nova-money-field
 ```
 
 ## Usage
@@ -19,7 +19,7 @@ In resource:
 
 ```php
 // ...
-use Vyuldashev\NovaMoneyField\Money;
+use cookaborough\NovaMoneyField\Money;
 
 public function fields(Request $request)
 {
